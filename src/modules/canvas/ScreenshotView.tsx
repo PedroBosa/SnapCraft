@@ -90,7 +90,7 @@ export const ScreenshotView: React.FC<ScreenshotViewProps> = ({
         </div>
         <div className="text-xs text-white/40 flex items-center gap-2">
           <span>Or press</span>
-          <kbd className="px-1.5 py-0.5 rounded bg-white/[0.08] border border-white/[0.12] text-white/70 font-mono text-[10px]">
+          <kbd className="px-1.5 py-0.5 rounded bg-white/[0.06] border border-white/[0.08] text-zinc-400 font-mono text-[9px]">
             ⌘V / Ctrl+V
           </kbd>
           <span>to paste from clipboard</span>

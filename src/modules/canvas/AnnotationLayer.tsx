@@ -99,12 +99,12 @@ export const AnnotationToolbar: React.FC = () => {
   const selectedAnno = annotations.find((a) => a.id === selectedAnnotationId);
 
   return (
-    <div className="absolute top-4 left-1/2 -translate-x-1/2 z-30 flex items-center gap-1.5 p-1 rounded-lg bg-black/80 backdrop-blur-md border border-white/10 shadow-2xl text-xs select-none stage-ignore-export">
+    <div className="absolute top-4 left-1/2 -translate-x-1/2 z-30 flex items-center gap-1.5 p-1 rounded-lg bg-[#0D0D10]/90 backdrop-blur-md border border-white/[0.08] shadow-2xl text-xs select-none stage-ignore-export">
       {/* Quick Add Buttons */}
-      <div className="flex items-center gap-1 pr-1.5 border-r border-white/10">
+      <div className="flex items-center gap-1 pr-1.5 border-r border-white/[0.06]">
         <button
           onClick={handleAddArrow}
-          className="flex items-center gap-1 px-2 py-1 rounded hover:bg-white/10 text-white/80 hover:text-white transition-colors"
+          className="flex items-center gap-1 px-2.5 py-1 rounded-[6px] hover:bg-white/[0.08] text-zinc-300 hover:text-white transition-colors"
           title="Add Arrow"
         >
           <ArrowUpRight className="w-3.5 h-3.5 text-brand-indigo-light" />
@@ -113,7 +113,7 @@ export const AnnotationToolbar: React.FC = () => {
 
         <button
           onClick={handleAddStepBadge}
-          className="flex items-center gap-1 px-2 py-1 rounded hover:bg-white/10 text-white/80 hover:text-white transition-colors"
+          className="flex items-center gap-1 px-2.5 py-1 rounded-[6px] hover:bg-white/[0.08] text-zinc-300 hover:text-white transition-colors"
           title="Add Numbered Step Badge"
         >
           <Bookmark className="w-3.5 h-3.5 text-brand-purple-light" />
@@ -122,7 +122,7 @@ export const AnnotationToolbar: React.FC = () => {
 
         <button
           onClick={handleAddTextPill}
-          className="flex items-center gap-1 px-2 py-1 rounded hover:bg-white/10 text-white/80 hover:text-white transition-colors"
+          className="flex items-center gap-1 px-2.5 py-1 rounded-[6px] hover:bg-white/[0.08] text-zinc-300 hover:text-white transition-colors"
           title="Add Text Pill / Label"
         >
           <Type className="w-3.5 h-3.5 text-brand-cyan" />
@@ -131,7 +131,7 @@ export const AnnotationToolbar: React.FC = () => {
 
         <button
           onClick={handleAddRedactBox}
-          className="flex items-center gap-1 px-2 py-1 rounded hover:bg-white/10 text-white/80 hover:text-white transition-colors"
+          className="flex items-center gap-1 px-2.5 py-1 rounded-[6px] hover:bg-white/[0.08] text-zinc-300 hover:text-white transition-colors"
           title="Add Blur / Redact Box"
         >
           <EyeOff className="w-3.5 h-3.5 text-brand-emerald" />
@@ -141,7 +141,7 @@ export const AnnotationToolbar: React.FC = () => {
 
       {/* Selected Annotation Actions: Color palette & Delete */}
       {selectedAnno && (
-        <div className="flex items-center gap-1.5 pl-0.5 pr-1.5 border-r border-white/10">
+        <div className="flex items-center gap-1.5 pl-0.5 pr-1.5 border-r border-white/[0.06]">
           <div className="flex items-center gap-1">
             {ANNOTATION_COLORS.map((c) => (
               <button
@@ -160,7 +160,7 @@ export const AnnotationToolbar: React.FC = () => {
 
           <button
             onClick={() => removeAnnotation(selectedAnno.id)}
-            className="p-1 rounded text-red-400 hover:text-red-300 hover:bg-red-500/20 transition-colors ml-1"
+            className="p-1 rounded-[6px] text-red-400 hover:text-red-300 hover:bg-red-500/20 transition-colors ml-1"
             title="Delete Selected Annotation"
           >
             <Trash2 className="w-3.5 h-3.5" />
@@ -172,7 +172,7 @@ export const AnnotationToolbar: React.FC = () => {
       {annotations.length > 0 && (
         <button
           onClick={clearAnnotations}
-          className="px-2 py-1 rounded text-white/40 hover:text-red-400 hover:bg-white/5 transition-colors text-[11px] font-mono"
+          className="px-2 py-1 rounded-[6px] text-zinc-400 hover:text-red-400 hover:bg-white/[0.04] transition-colors text-[11px] font-mono"
           title="Clear all annotations"
         >
           Clear ({annotations.length})

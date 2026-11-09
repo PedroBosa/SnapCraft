@@ -234,9 +234,9 @@ export const StageViewport: React.FC<StageViewportProps> = ({ stageRef }) => {
       )}
 
       {/* Floating HUD: Zoom, Dimensions & Guides in Bottom-Right */}
-      <div className="absolute bottom-4 right-4 z-30 flex items-center gap-1.5 p-1 rounded-lg bg-black/75 backdrop-blur-md border border-white/10 shadow-2xl text-white/70 text-xs font-mono stage-ignore-export">
+      <div className="absolute bottom-4 right-4 z-30 flex items-center gap-1.5 p-1 rounded-lg bg-[#0D0D10]/90 backdrop-blur-md border border-white/[0.08] shadow-2xl text-zinc-300 text-xs font-mono stage-ignore-export">
         {/* Real-time Dimensions */}
-        <div className="px-2 py-1 text-[11px] text-white/50 border-r border-white/10 flex items-center gap-1.5">
+        <div className="px-2 py-1 text-[11px] text-zinc-400 border-r border-white/[0.06] flex items-center gap-1.5">
           <span className="w-1.5 h-1.5 rounded-full bg-brand-indigo-light animate-pulse" />
           <span>{dimensions.width} × {dimensions.height} px</span>
         </div>
@@ -244,10 +244,10 @@ export const StageViewport: React.FC<StageViewportProps> = ({ stageRef }) => {
         {/* Guides Toggle */}
         <button
           onClick={toggleGuides}
-          className={`p-1.5 rounded transition-colors ${
+          className={`p-1.5 rounded-[6px] transition-colors ${
             showGuides
               ? 'bg-brand-cyan/20 text-brand-cyan border border-brand-cyan/30'
-              : 'hover:bg-white/10 text-white/50'
+              : 'hover:bg-white/[0.08] text-zinc-400 hover:text-white'
           }`}
           title="Toggle Center Alignment Guides"
         >
@@ -257,19 +257,19 @@ export const StageViewport: React.FC<StageViewportProps> = ({ stageRef }) => {
         {/* Zoom Controls */}
         <button
           onClick={() => setStageZoom(Math.max(0.5, stageZoom - 0.1))}
-          className="p-1.5 rounded hover:bg-white/10 text-white/50 hover:text-white transition-colors"
+          className="p-1.5 rounded-[6px] hover:bg-white/[0.08] text-zinc-400 hover:text-white transition-colors"
           title="Zoom Out"
         >
           <ZoomOut className="w-3.5 h-3.5" />
         </button>
 
-        <span className="px-1 text-[11px] text-white/70 min-w-[36px] text-center">
+        <span className="px-1 text-[11px] text-zinc-300 min-w-[36px] text-center font-medium">
           {Math.round(stageZoom * 100)}%
         </span>
 
         <button
           onClick={() => setStageZoom(Math.min(1.5, stageZoom + 0.1))}
-          className="p-1.5 rounded hover:bg-white/10 text-white/50 hover:text-white transition-colors"
+          className="p-1.5 rounded-[6px] hover:bg-white/[0.08] text-zinc-400 hover:text-white transition-colors"
           title="Zoom In"
         >
           <ZoomIn className="w-3.5 h-3.5" />
@@ -277,7 +277,7 @@ export const StageViewport: React.FC<StageViewportProps> = ({ stageRef }) => {
 
         <button
           onClick={() => setStageZoom(1)}
-          className="p-1.5 rounded hover:bg-white/10 text-white/50 hover:text-white transition-colors"
+          className="p-1.5 rounded-[6px] hover:bg-white/[0.08] text-zinc-400 hover:text-white transition-colors"
           title="Reset Zoom (100%)"
         >
           <RotateCcw className="w-3 h-3" />

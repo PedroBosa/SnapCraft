@@ -2,24 +2,113 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  color-scheme: dark;
+@layer base {
+  :root {
+    color-scheme: dark;
+    --background: 240 10% 3.5%;     /* #09090B */
+    --foreground: 0 0% 98%;          /* #FAFAFA */
+    --card: 240 8% 6%;              /* #0D0D10 */
+    --border: 240 5% 15%;
+    --input: 240 6% 12%;
+    --ring: 245 78% 60%;
+    --radius: 0.625rem;
+  }
+
+  * {
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #09090B;
+    color: #EDEDEF;
+    font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    user-select: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    @apply selection:bg-secondary/30 selection:text-white;
+  }
+
+  /* Otimização de renderização nítida de vetores e ícones SVG */
+  svg {
+    shape-rendering: geometricPrecision;
+    text-rendering: geometricPrecision;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Elimina spinner nativo de inputs type=number */
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0 !important;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield !important;
+  }
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #09090b;
-  color: #ededef;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  user-select: none;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* ==========================================================================
+   SISTEMA GLOBAL DE SCROLLBAR PADRONIZADO (Linear / Geist / Raycast Style)
+   ========================================================================== */
+
+html, body {
+  scrollbar-width: thin !important;
+  scrollbar-color: rgba(255, 255, 255, 0.18) #09090B !important;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+*::-webkit-scrollbar {
+  width: 6px !important;
+  height: 6px !important;
+}
+
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track,
+*::-webkit-scrollbar-track {
+  background: #09090B !important;
+}
+
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb,
+*::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.16) !important;
+  border-radius: 9999px !important;
+  border: 1px solid rgba(255, 255, 255, 0.03) !important;
+  transition: background 0.2s ease !important;
+}
+
+html::-webkit-scrollbar-thumb:hover,
+body::-webkit-scrollbar-thumb:hover,
+*::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.28) !important;
+}
+
+html::-webkit-scrollbar-thumb:active,
+body::-webkit-scrollbar-thumb:active,
+*::-webkit-scrollbar-thumb:active {
+  background: rgba(255, 255, 255, 0.42) !important;
+}
+
+html::-webkit-scrollbar-button,
+body::-webkit-scrollbar-button,
+*::-webkit-scrollbar-button {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+html::-webkit-scrollbar-corner,
+body::-webkit-scrollbar-corner,
+*::-webkit-scrollbar-corner {
+  background: #09090B !important;
 }
 
 /* Technical checkered pattern for transparent canvas preview */
 .canvas-checkerboard {
-  background-color: #0d0d12;
+  background-color: #0D0D12;
   background-image:
     linear-gradient(45deg, #181822 25%, transparent 25%),
     linear-gradient(-45deg, #181822 25%, transparent 25%),
@@ -27,25 +116,6 @@ body {
     linear-gradient(-45deg, transparent 75%, #181822 75%);
   background-size: 16px 16px;
   background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
-}
-
-/* Custom micro scrollbars for dense panels */
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.12);
-  border-radius: 9999px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.22);
 }
 
 /* Monospace font settings for code */
@@ -70,7 +140,7 @@ input[type="range"]::-webkit-slider-thumb {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: #6366f1;
+  background: #6366F1;
   cursor: pointer;
   box-shadow: 0 0 8px rgba(99, 102, 241, 0.5);
   transition: transform 0.1s ease;
@@ -84,8 +154,38 @@ input[type="range"]::-moz-range-thumb {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: #6366f1;
+  background: #6366F1;
   cursor: pointer;
   border: none;
   box-shadow: 0 0 8px rgba(99, 102, 241, 0.5);
+}
+
+@layer utilities {
+  .custom-scrollbar::-webkit-scrollbar {
+    height: 3px !important;
+    width: 3px !important;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.03) !important;
+    border-radius: 9999px !important;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.18) !important;
+    border-radius: 9999px !important;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.32) !important;
+  }
+
+  .no-scrollbar::-webkit-scrollbar,
+  .scrollbar-none::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+  .no-scrollbar,
+  .scrollbar-none {
+    -ms-overflow-style: none !important;
+    scrollbar-width: none !important;
+  }
 }

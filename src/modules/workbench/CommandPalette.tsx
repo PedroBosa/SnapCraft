@@ -253,15 +253,15 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({
   return (
     <div
       onClick={onClose}
-      className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-start justify-center pt-24 p-4 animate-in fade-in duration-100"
+      className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-start justify-center pt-24 p-4 animate-in fade-in duration-100"
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="w-full max-w-[520px] bg-studio-panel border border-white/10 rounded-xl shadow-2xl overflow-hidden flex flex-col animate-in zoom-in-95 duration-100"
+        className="w-full max-w-[540px] bg-[#0D0D10] border border-white/[0.08] rounded-xl shadow-2xl shadow-black/80 overflow-hidden flex flex-col animate-in zoom-in-95 duration-100"
       >
         {/* Search Input Bar */}
-        <div className="h-12 px-4 border-b border-white/[0.08] flex items-center gap-3 bg-studio-panelAlt">
-          <Search className="w-4 h-4 text-white/40 shrink-0" />
+        <div className="h-14 px-4 border-b border-white/[0.06] flex items-center gap-3 bg-[#0D0D10]">
+          <Search className="w-4 h-4 text-zinc-400 shrink-0" />
           <input
             ref={inputRef}
             type="text"
@@ -271,19 +271,19 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({
               setSelectedIndex(0);
             }}
             onKeyDown={handleKeyDown}
-            placeholder="Type a command or search action..."
-            className="w-full bg-transparent border-none outline-none text-white text-xs font-sans placeholder:text-white/30"
+            placeholder="Digite um comando ou busque uma ação..."
+            className="w-full bg-transparent border-none outline-none text-white text-xs font-sans placeholder:text-zinc-500"
           />
-          <kbd className="px-1.5 py-0.5 rounded bg-white/[0.06] border border-white/10 text-[10px] font-mono text-white/40">
+          <kbd className="px-1.5 py-0.5 rounded bg-white/[0.06] border border-white/[0.08] text-[10px] font-mono text-zinc-400">
             Esc
           </kbd>
         </div>
 
         {/* Command Items List */}
-        <div className="max-h-[320px] overflow-y-auto p-1.5 divide-y divide-white/[0.04]">
+        <div className="max-h-[340px] overflow-y-auto p-2 space-y-1 custom-scrollbar">
           {filtered.length === 0 ? (
-            <div className="py-8 text-center text-xs text-white/40 font-mono">
-              No matching commands found
+            <div className="py-8 text-center text-xs text-zinc-500 font-mono">
+              Nenhum comando encontrado
             </div>
           ) : (
             filtered.map((cmd, idx) => (
@@ -294,16 +294,16 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({
                   onClose();
                 }}
                 onMouseEnter={() => setSelectedIndex(idx)}
-                className={`w-full px-3 py-2 rounded-lg flex items-center justify-between text-xs transition-colors ${
+                className={`w-full px-3 py-2 rounded-lg flex items-center justify-between text-xs transition-colors border ${
                   selectedIndex === idx
-                    ? 'bg-brand-indigo text-white shadow-sm'
-                    : 'text-white/80 hover:bg-white/[0.04]'
+                    ? 'border-white/[0.08] bg-zinc-800/90 text-white shadow-sm'
+                    : 'border-transparent text-zinc-300 hover:text-white hover:bg-white/[0.04]'
                 }`}
               >
                 <div className="flex items-center gap-2.5">
                   <div
                     className={`shrink-0 ${
-                      selectedIndex === idx ? 'text-white' : ''
+                      selectedIndex === idx ? 'text-white' : 'text-zinc-400'
                     }`}
                   >
                     {cmd.icon}
@@ -314,7 +314,7 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({
                 <div className="flex items-center gap-2">
                   <span
                     className={`text-[10px] font-mono uppercase tracking-wider ${
-                      selectedIndex === idx ? 'text-white/80' : 'text-white/30'
+                      selectedIndex === idx ? 'text-zinc-200' : 'text-zinc-500'
                     }`}
                   >
                     {cmd.category}
@@ -324,7 +324,7 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({
                       className={`px-1.5 py-0.5 rounded text-[10px] font-mono border ${
                         selectedIndex === idx
                           ? 'bg-white/20 border-white/30 text-white'
-                          : 'bg-white/[0.06] border-white/10 text-white/50'
+                          : 'bg-white/[0.06] border-white/[0.08] text-zinc-400'
                       }`}
                     >
                       {cmd.shortcut}
@@ -337,12 +337,12 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({
         </div>
 
         {/* Footer */}
-        <div className="h-8 px-4 border-t border-white/[0.06] bg-black/30 flex items-center justify-between text-[10px] font-mono text-white/40">
+        <div className="h-10 px-4 border-t border-white/[0.06] bg-zinc-950/80 flex items-center justify-between text-[10px] font-mono text-zinc-400">
           <div className="flex items-center gap-3">
-            <span>↑↓ Navigate</span>
-            <span>↵ Select</span>
+            <span>↑↓ Navegar</span>
+            <span>↵ Executar</span>
           </div>
-          <span>SnapCraft Command Bar</span>
+          <span>Barra de Comandos SnapCraft</span>
         </div>
       </div>
     </div>
