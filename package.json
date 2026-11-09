@@ -1,13 +1,42 @@
 {
   "name": "snapcraft",
-  "private": true,
   "version": "0.1.0",
+  "description": "Estúdio de alta densidade para apresentação de código e captura de telas com modelo de iluminação em camadas e rasterização no navegador.",
+  "author": {
+    "name": "Pedro Bosa",
+    "url": "https://github.com/PedroBosa"
+  },
+  "license": "MIT",
+  "homepage": "https://pedrobosa.github.io/SnapCraft/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PedroBosa/SnapCraft.git"
+  },
+  "bugs": {
+    "url": "https://github.com/PedroBosa/SnapCraft/issues"
+  },
+  "keywords": [
+    "code-presentation",
+    "screenshot-studio",
+    "syntax-highlighting",
+    "developer-tools",
+    "ambient-occlusion",
+    "prismjs",
+    "react",
+    "typescript",
+    "vite",
+    "tailwind"
+  ],
+  "private": true,
   "type": "module",
+  "engines": {
+    "node": ">=22.0.0"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "tsc --noEmit",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "typecheck": "tsc -b"
   },
   "dependencies": {
     "clsx": "^2.1.1",

@@ -1,16 +1,30 @@
 <!doctype html>
-<html lang="en" class="dark">
+<html lang="pt-BR" class="dark">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236366F1' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect width='18' height='18' x='3' y='3' rx='2'/><path d='m9 10 2 2-2 2'/><path d='M15 14h-2'/></svg>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SnapCraft — High-Fidelity Code & Screenshot Studio</title>
-    <!-- Google Fonts: Inter & JetBrains Mono -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="theme-color" content="#09090b" />
+    <meta name="description" content="Estúdio de alta densidade para apresentação de código e captura de telas com modelo de iluminação em camadas e rasterização no navegador. Zero backend." />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://pedrobosa.github.io/SnapCraft/" />
+    <meta property="og:title" content="SnapCraft — Apresentação de Código e Captura de Telas em Alta Fidelidade" />
+    <meta property="og:description" content="Estúdio de alta densidade para apresentação de código e captura de telas com modelo de iluminação em camadas e rasterização no navegador. Zero backend." />
+    <meta property="og:image" content="https://pedrobosa.github.io/SnapCraft/og-image.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://pedrobosa.github.io/SnapCraft/" />
+    <meta property="twitter:title" content="SnapCraft — Apresentação de Código e Captura de Telas em Alta Fidelidade" />
+    <meta property="twitter:description" content="Estúdio de alta densidade para apresentação de código e captura de telas com modelo de iluminação em camadas e rasterização no navegador. Zero backend." />
+    <meta property="twitter:image" content="https://pedrobosa.github.io/SnapCraft/og-image.png" />
+
+    <title>SnapCraft — Apresentação de Código e Captura de Telas em Alta Fidelidade</title>
   </head>
   <body class="bg-studio-bg text-studio-text antialiased selection:bg-brand-indigo selection:text-white overflow-hidden">
+    <noscript>Você precisa habilitar o JavaScript para executar o SnapCraft.</noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
