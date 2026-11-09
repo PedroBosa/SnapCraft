@@ -10,7 +10,7 @@ O formato baseia-se em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0
 - Proposta de migração de rotinas com acesso ao DOM fora de `src/core/` para módulos dedicados.
 - Proposta de testes automatizados unitários via Vitest para o motor LAO e tokenizador.
 
-## [0.1.0] - 2026-11-09
+## [1.0.0] - 2026-11-09
 
 ### Adicionado
 - Estúdio de captura e apresentação de código com suporte a temas escuros.
@@ -26,5 +26,5 @@ O formato baseia-se em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0
 - Workflows de validação contínua (CI) e publicação automatizada no GitHub Pages.
 - Documentação técnica e arquivos de governança para comunidade open source.
 
-[Não lançado]: https://github.com/PedroBosa/SnapCraft/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/PedroBosa/SnapCraft/releases/tag/v0.1.0
+[Não lançado]: https://github.com/PedroBosa/SnapCraft/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/PedroBosa/SnapCraft/releases/tag/v1.0.0

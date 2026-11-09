@@ -10,8 +10,8 @@ A tabela abaixo descreve as versões do SnapCraft que recebem atualizações de 
 
 | Versão | Suporte Ativo | Observações |
 |---|---|---|
-| `0.1.x` | Sim | Versão ativa de desenvolvimento na branch `main`. |
-| `< 0.1.0` | Não | Versões experimentais preliminares não suportadas. |
+| `1.0.x` | Sim | Versão ativa de desenvolvimento na branch `main`. |
+| `< 1.0.0` | Não | Versões experimentais preliminares não suportadas. |
 
 ---
 

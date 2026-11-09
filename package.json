@@ -1,6 +1,6 @@
 {
   "name": "snapcraft",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Estúdio de alta densidade para apresentação de código e captura de telas com modelo de iluminação em camadas e rasterização no navegador.",
   "author": {
     "name": "Pedro Bosa",
@@ -30,7 +30,7 @@
   "private": true,
   "type": "module",
   "engines": {
-    "node": ">=22.0.0"
+    "node": ">=20.0.0"
   },
   "scripts": {
     "dev": "vite",
