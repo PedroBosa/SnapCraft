@@ -16,6 +16,10 @@
   <img alt="Status do CI" src="https://github.com/PedroBosa/SnapCraft/actions/workflows/ci.yml/badge.svg">
 </p>
 
+<p align="center">
+  <img src="docs/images/demo.gif" alt="Demonstração do SnapCraft em funcionamento" width="850">
+</p>
+
 ---
 
 ## Visão geral
