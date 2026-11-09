@@ -3,7 +3,7 @@
 > **Estúdio de apresentação de código e captura de telas com modelo de iluminação em camadas e rasterização no navegador. Execução 100% no cliente, sem backend e sem telemetria em tempo de execução.**
 
 <p align="center">
-  <a href="https://pedrobosa.github.io/SnapCraft/"><img alt="Demo ao vivo" src="https://img.shields.io/badge/Demo-Online-58DB91?style=for-the-badge&logo=github"></a>
+  <a href="https://pedrobosa.github.io/SnapCraft/"><img alt="Demo ao vivo" src="https://img.shields.io/badge/Demo-Online-10B981?style=for-the-badge&logo=github"></a>
   <a href="LICENSE"><img alt="Licença: MIT" src="https://img.shields.io/badge/Licen%C3%A7a-MIT-6366F1?style=for-the-badge"></a>
   <a href="https://github.com/PedroBosa"><img alt="Autor: Pedro Bosa" src="https://img.shields.io/badge/Autor-Pedro%20Bosa-4F46E5?style=for-the-badge&logo=github"></a>
 </p>
@@ -241,5 +241,6 @@ Contribuições que aprimorem a estabilidade, desempenho e fidelidade gráfica s
 
 ## Licença
 
-Distribuído sob a licença MIT. Consulte [`LICENSE`](LICENSE) para mais informações.<br>
+Distribuído sob a licença MIT. Consulte [`LICENSE`](LICENSE) para mais informações.
+
 Desenvolvido por [Pedro Bosa](https://github.com/PedroBosa).
